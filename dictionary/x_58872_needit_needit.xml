@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="6493ecba83c95210b9fefaa6feaad35c" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Requested Type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Dipartimento" sequence="3" value="dipartimento"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested For" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="lazio" sequence="1" value="lazio"/>
+                <element inactive_on_update="false" label="Inter" sequence="0" value="inter"/>
+            </choice>
+        </element>
+    </element>
+</database>
